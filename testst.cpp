@@ -46,6 +46,7 @@ void test03() {
 		{5,9,7,2,0},
 	};
 
+
 	string expected = "0";
 
 	string actual = matrix_zero(matrix);
