@@ -28,15 +28,18 @@ string matrix_convert(int matrix[N][N]) {
 
 string matrix_zero(int matrix[N][N]) {
 	string res = "";
+	bool flag = false;
 	for (int i = 0; i < N; i++)
 	{
 		for (int b = 0; b < N; b++)
 		{
-			if (matrix[i][b] == 0) {
-				res += to_string(i+1) + " ";
-				break;
+			
+			
+			if (matrix[i][b] < matrix[i][b + 1] || matrix[i][b + 1] < matrix[i][b]) {
+				flag = true;
 			}
+			
 		}
 	}
-	return res;
+	res += to_string(flag);	return res;
 }
